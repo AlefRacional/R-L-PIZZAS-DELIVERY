@@ -1,375 +1,422 @@
 :root {
-    --primary-color: #d7263d;
-    --secondary-color: #ffb400;
-    --background-color: #fff8f0;
-    --text-color: #333;
-    --highlight-color: #000;
-    --section-background: #ffffff;
-    --section-border: #dddddd;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    scroll-behavior: smooth;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .header-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  header .logo {
-    height: 60px; /* Reduz o tamanho do logo para combinar */
-    margin-left: 20px;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-    margin-right: 20px;
-  }
-  
-  nav li {
-    display: flex;
-  }
-  
-  nav a {
-    padding: 10px 15px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  /* Cores fixas */
-  .btn-cardapio {
-    background-color: #ff6961;
-    color: #fff;
-  }
-  
-  .btn-combos {
-    background-color: #5dade2;
-    color: #fff;
-  }
-  
-  .btn-esfihas {
-    background-color: #58d68d;
-    color: #fff;
-  }
-  
-  .btn-promocoes {
-    background-color: #f5b041;
-    color: #fff;
-  }
-  
-  .btn-contato {
-    background-color: #af7ac5;
-    color: #fff;
-  }
-  
-  /* Hover para cada botão */
-  .btn-cardapio:hover {
-    background-color: #e74c3c;
-    color: #fff;
-  }
-  
-  .btn-combos:hover {
-    background-color: #3498db;
-    color: #fff;
-  }
-  
-  .btn-esfihas:hover {
-    background-color: #2ecc71;
-    color: #fff;
-  }
-  
-  .btn-promocoes:hover {
-    background-color: #f39c12;
-    color: #fff;
-  }
-  
-  .btn-contato:hover {
-    background-color: #9b59b6;
-    color: #fff;
-  }
-  
-  /* BANNER - Sem caixa branca */
-  .banner {
-    background: url('imagens/LOGOCAPA1.png') no-repeat center center/cover;
-    height: 400px;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-  
-  .banner::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.1); /* Diminui para 20% de escuridão */
-    z-index: 1;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-  
-  .banner-content {
-    position: relative;
-    z-index: 2;
-  }
-  
+  --primary-color: #d7263d;
+  --secondary-color: #ffb400;
+  --background-color: #fff8f0;
+  --text-color: #333;
+  --highlight-color: #000;
+  --section-background: #ffffff;
+  --section-border: #dddddd;
+  --promo-bg: #fff8e1;
+  --doce-bg: #fff0f5;
+  --doce-border: #e6a8d7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  height: 60px;
+  margin-left: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin-right: 20px;
+}
+
+nav li {
+  display: flex;
+}
+
+nav a {
+  padding: 10px 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-cardapio {
+  background-color: #ff6961;
+  color: #fff;
+}
+
+.btn-combos {
+  background-color: #5dade2;
+  color: #fff;
+}
+
+.btn-esfihas {
+  background-color: #58d68d;
+  color: #fff;
+}
+
+.btn-bebidas {
+  background-color: #5dade2;
+  color: #fff;
+}
+
+.btn-promocoes {
+  background-color: #f5b041;
+  color: #fff;
+}
+
+.btn-contato {
+  background-color: #af7ac5;
+  color: #fff;
+}
+
+.btn-cardapio:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-combos:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.btn-esfihas:hover {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.btn-bebidas:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.btn-promocoes:hover {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.btn-contato:hover {
+  background-color: #9b59b6;
+  color: #fff;
+}
+
+.banner {
+  background: url('imagens/LOGOCAPA1.png') no-repeat center center/cover;
+  height: 400px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-whatsapp-banner {
+  background: #25d366;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-whatsapp-banner:hover {
+  background: #128c7e;
+  transform: scale(1.05);
+}
+
+section {
+  padding: 40px 0;
+  margin-bottom: 20px;
+}
+
+section .container {
+  background-color: var(--section-background);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--section-border);
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-size: 2.2rem;
+}
+
+.subtitulo-secao {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: -20px 0 25px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.cardapio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  background: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  position: relative;
+}
+
+.item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.item.barato {
+  background-color: var(--promo-bg);
+  border: 2px dashed var(--secondary-color);
+}
+
+.item.doce {
+  background-color: var(--doce-bg);
+  border: 2px solid var(--doce-border);
+}
+
+.item h3 {
+  margin-bottom: 10px;
+}
+
+.item h3 a {
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, color 0.3s;
+}
+
+.item.doce h3 a {
+  background-color: #e6a8d7;
+}
+
+.item h3 a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.item.doce h3 a:hover {
+  background-color: #c2185b;
+}
+
+.item p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.codigo-item {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
+}
+
+.item.doce .codigo-item {
+  color: #c2185b;
+}
+
+.tipo-item {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.btn-whatsapp-contato {
+  background: #25d366;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-whatsapp-contato:hover {
+  background: #128c7e;
+  transform: scale(1.05);
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  z-index: 100;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.promo-alerta {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px 20px;
+  border: 1px solid #ffeeba;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.subtitulo-promocao {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d7263d;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
   .banner-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
   }
-  
+
   .banner-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .btn-whatsapp-banner {
-    background: #25d366;
-    color: #fff;
-    padding: 14px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    display: inline-block;
-    transition: background 0.3s, transform 0.3s;
-  }
-  
-  .btn-whatsapp-banner:hover {
-    background: #128c7e;
-    transform: scale(1.05);
-  }
-  
-  /* SECTIONS - Menos espaçamento */
-  section {
-    padding: 40px 0;
-    margin-bottom: 20px;
-  }
-  
-  section .container {
-    background-color: var(--section-background);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid var(--section-border);
-  }
-  
-  section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(white);
-    font-size: 2.2rem;
-  }
-  
-  /* CARDÁPIO */
-  .cardapio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  
-  .item {
-    background: #fff;
-    border: 2px solid var(--primary-color);
-    border-radius: 20px;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-  }
-  
-  .item:hover {
-    transform: translateY(-8px);
-    border-color: var(--secondary-color);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  .item h3 a {
-    background-color: var(--secondary-color);
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    color: #000;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  .item h3 a:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-  }
-  
-  .item p {
     font-size: 1rem;
-    margin-top: 10px;
   }
-  
-  .item.promo {
-    background-color: #ffe5e5;
-    border-color: var(--secondary-color);
-    font-weight: bold;
+
+  section h2 {
+    font-size: 2rem;
   }
-  
-  /* LISTA DE CONTATO */
-  ul {
-    list-style: none;
-    padding-left: 0;
+
+  .btn-whatsapp-banner, .btn-whatsapp-contato {
+    font-size: 1rem;
+    padding: 12px 20px;
   }
-  
-  ul li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .banner-content h2 {
+    font-size: 1.8rem;
   }
-  
-  /* FOOTER */
-  footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 40px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+
+  .banner-content p {
+    font-size: 0.9rem;
   }
-  
-  /* BOTÃO CONTATO */
-  .btn-whatsapp-contato {
-    background: #25d366;
-    color: #fff;
-    padding: 14px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background 0.3s, transform 0.3s;
+
+  .item h3 a {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
-  
-  .btn-whatsapp-contato:hover {
-    background: #128c7e;
-    transform: scale(1.05);
+
+  .btn-whatsapp-banner, .btn-whatsapp-contato {
+    font-size: 0.9rem;
+    padding: 10px 18px;
   }
-  
-  /* BOTÃO FLUTUANTE WHATSAPP */
-  .whatsapp-float {
-    position: fixed;
-    width: 65px;
-    height: 65px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-    z-index: 100;
-    animation: pulse 2s infinite;
-  }
-  
-  .whatsapp-float img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-  }
-  
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
-    .banner-content h2 {
-      font-size: 2rem;
-    }
-  
-    .banner-content p {
-      font-size: 1rem;
-    }
-  
-    section h2 {
-      font-size: 2rem;
-    }
-  
-    .btn-whatsapp-banner, .btn-whatsapp-contato {
-      font-size: 1rem;
-      padding: 12px 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .banner-content h2 {
-      font-size: 1.8rem;
-    }
-  
-    .banner-content p {
-      font-size: 0.9rem;
-    }
-  
-    .item h3 a {
-      font-size: 1rem;
-      padding: 10px 20px;
-    }
-  
-    .btn-whatsapp-banner, .btn-whatsapp-contato {
-      font-size: 0.9rem;
-      padding: 10px 18px;
-    }
-  }
-  .promo-alerta {
-    background-color: #fff3cd; /* Amarelo clarinho */
-    color: #856404; /* Marrom escuro para o texto */
-    padding: 15px 20px;
-    border: 1px solid #ffeeba;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  .subtitulo-promocao {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #d7263d; /* Cor vermelha para combinar com o site */
-    margin-top: 10px;
-    margin-bottom: 30px;
-  }
-  
+}
