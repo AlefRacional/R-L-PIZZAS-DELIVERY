@@ -444,4 +444,18 @@ footer {
     padding: 8px;
     border-radius: 5px;
   }
+
+  @media screen and (max-width: 768px) {
+    .header-flex {
+      flex-direction: column; /* Organiza os elementos em coluna */
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+  
+    header {
+      width: 100%; /* Garante que o menu não ultrapasse a tela */
+      padding: 10px;
+    }
+  }
 }
